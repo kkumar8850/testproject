@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { Grid2, Paper } from '@mui/material';
+import Payment from './components/Payment';
+import PremiumService from './components/PremiumService';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Grid2 container>
+        <Grid2 size={4}>
+          
+        </Grid2>
+        <Grid2 size={4}>
+          <PremiumService />
+          <Paper
+            sx={{mt : '20px'}}
+          >
+            <Payment />
+          </Paper>
+        </Grid2>
+        <Grid2 size={4}>
+
+        </Grid2>
+      </Grid2>
     </div>
   );
 }
